@@ -9,18 +9,20 @@ namespace MaplinkTest
     {
         static void Main(string[] args)
         {
-	        var address1 = new AddressInfo()
+	        char[] separator = {';'};
+	        var address = args[0].Split(separator);
+	        var addressInfo = new AddressInfo()
 	        {
-		        Address = "Rua das Baunilhas",
-		        City = "São Paulo",
-		        District = "",
-		        Number = "33",
-		        State = "SP",
-		        Zipcode = "03146020"
+                Address = address[0],
+                Number = address[1],
+                District = address[2],
+                City = address[3],
+                State = address[4],
+                Zipcode = address[5]
 	        };
 
             var service = new MaplinkAddressFinder();
-	        var coords = service.GetCoordinates(address1);
+	        var coords = service.GetCoordinates(addressInfo);
             Console.WriteLine(coords.Latitude + ";" + coords.Longitude);
         }
     }

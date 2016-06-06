@@ -13,13 +13,13 @@ namespace MaplinkTest
             Console.WriteLine("Calling GetCoordinates");
             Console.WriteLine("Performing authentication - " + DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt"));
             var auth = new Authentication();
-		    auth.Timeout = 500;
+		    auth.Timeout = 1000;
 		    var authToken = auth.getToken(ConfigurationManager.AppSettings["MaplinkUser"], ConfigurationManager.AppSettings["MaplinkPassword"]);
             Console.WriteLine("Finished authentication process - " + DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt"));
 
             Console.WriteLine("Starting address finder process - " + DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt"));
             var service = new AddressFinder();
-		    service.Timeout = 500;
+		    service.Timeout = 1000;
             
             var addr = new Address();
 		    addr.street = address.Address;
