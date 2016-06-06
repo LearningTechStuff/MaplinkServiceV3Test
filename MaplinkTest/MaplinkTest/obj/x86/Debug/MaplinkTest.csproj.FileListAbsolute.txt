@@ -1,0 +1,5 @@
+E:\andersonkmi\projects\github\MaplinkServiceV3Test\MaplinkTest\MaplinkTest\bin\Debug\MaplinkTest.exe.config
+E:\andersonkmi\projects\github\MaplinkServiceV3Test\MaplinkTest\MaplinkTest\bin\Debug\MaplinkTest.exe
+E:\andersonkmi\projects\github\MaplinkServiceV3Test\MaplinkTest\MaplinkTest\bin\Debug\MaplinkTest.pdb
+E:\andersonkmi\projects\github\MaplinkServiceV3Test\MaplinkTest\MaplinkTest\obj\x86\Debug\MaplinkTest.exe
+E:\andersonkmi\projects\github\MaplinkServiceV3Test\MaplinkTest\MaplinkTest\obj\x86\Debug\MaplinkTest.pdb
