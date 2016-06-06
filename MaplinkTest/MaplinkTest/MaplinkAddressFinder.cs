@@ -11,13 +11,13 @@ namespace MaplinkTest
 	    public GeographicalCoordinates GetCoordinates(AddressInfo address)
 	    {
             Console.WriteLine("Calling GetCoordinates");
-            Console.WriteLine("Performing authentication - " + DateTime.Now.ToString());
+            Console.WriteLine("Performing authentication - " + DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt"));
             var auth = new Authentication();
 		    auth.Timeout = 500;
 		    var authToken = auth.getToken(ConfigurationManager.AppSettings["MaplinkUser"], ConfigurationManager.AppSettings["MaplinkPassword"]);
-            Console.WriteLine("Finished authentication process - " + DateTime.Now.ToString());
+            Console.WriteLine("Finished authentication process - " + DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt"));
 
-            Console.WriteLine("Starting address finder process - " + DateTime.Now.ToString());
+            Console.WriteLine("Starting address finder process - " + DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt"));
             var service = new AddressFinder();
 		    service.Timeout = 500;
             
@@ -33,7 +33,7 @@ namespace MaplinkTest
 		    addr.zip = address.Zipcode;
 
 		    var coordinates = service.getXY(addr, authToken);
-            Console.WriteLine("Finished service call - " + DateTime.Now.ToString());
+            Console.WriteLine("Finished service call - " + DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt"));
 
 		    var coords = new GeographicalCoordinates();
 		    coords.Latitude = coordinates.x;

@@ -38,8 +38,10 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,76 +54,92 @@
     <Compile Include="MaplinkAddressFinder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\MaplinkAuth\Reference.cs">
+    <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Service References\MaplinkWebService\Reference.cs">
+    <Compile Include="Web References\MaplinkAuth\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MaplinkWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\MaplinkAuth\Authentication.wsdl" />
-    <None Include="Service References\MaplinkAuth\MaplinkTest.MaplinkAuth.TokenValidated.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Service References\MaplinkWebService\AddressFinder.wsdl" />
-    <None Include="Service References\MaplinkWebService\MaplinkTest.MaplinkWebService.AddressInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\MaplinkAuth\Authentication.wsdl" />
+    <None Include="Web References\MaplinkAuth\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\MaplinkWebService\MaplinkTest.MaplinkWebService.AddressLocation.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\MaplinkAuth\TokenValidated.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Service References\MaplinkWebService\MaplinkTest.MaplinkWebService.CityLocationInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\MaplinkWS\AddressFinder.wsdl" />
+    <None Include="Web References\MaplinkWS\AddressInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Service References\MaplinkWebService\MaplinkTest.MaplinkWebService.CrossStreetLocation.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\MaplinkWS\AddressLocation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Service References\MaplinkWebService\MaplinkTest.MaplinkWebService.MapInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\MaplinkWS\CityLocationInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Service References\MaplinkWebService\MaplinkTest.MaplinkWebService.POIInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\MaplinkWS\CrossStreetLocation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Service References\MaplinkWebService\MaplinkTest.MaplinkWebService.Point.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\MaplinkWS\MapInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MaplinkWS\POIInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MaplinkWS\Point.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MaplinkWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\MaplinkAuth\" />
-    <WCFMetadataStorage Include="Service References\MaplinkWebService\" />
+    <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\MaplinkAuth\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\MaplinkAuth\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\MaplinkAuth\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\MaplinkWebService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\MaplinkWebService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\MaplinkWebService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <WebReferenceUrl Include="http://services.maplink.com.br/webservices/v3/AddressFinder/AddressFinder.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MaplinkWS\</RelPath>
+      <UpdateFromURL>http://services.maplink.com.br/webservices/v3/AddressFinder/AddressFinder.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MaplinkTest_MaplinkWS_AddressFinder</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://services.maplink.com.br/webservices/v3/Authentication/Authentication.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MaplinkAuth\</RelPath>
+      <UpdateFromURL>http://services.maplink.com.br/webservices/v3/Authentication/Authentication.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MaplinkTest_MaplinkAuth_Authentication</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
